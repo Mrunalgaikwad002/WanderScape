@@ -1,0 +1,346 @@
+.profileContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profileTabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.tabButton {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: none;
+  color: #666;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.tabButton:hover {
+  background: #f8f9fa;
+  color: #333;
+}
+
+.tabButton.active {
+  background: #00b894;
+  color: white;
+}
+
+.profileContent {
+  padding: 1rem 0;
+}
+
+/* Profile Section */
+.profileSection {
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+}
+
+.profileHeader {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.profileImage {
+  width: 100px;
+  height: 100px;
+  background: #e3f2fd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1976d2;
+  font-size: 2.5rem;
+}
+
+.profileInfo {
+  flex: 1;
+}
+
+.profileInfo h2 {
+  margin: 0 0 0.5rem;
+  color: #333;
+}
+
+.profileInfo p {
+  margin: 0;
+  color: #666;
+}
+
+.editButton {
+  padding: 0.75rem 1.5rem;
+  background: #00b894;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.editButton:hover {
+  background: #00a884;
+}
+
+.profileDetails {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: #00b894;
+}
+
+.detailContent {
+  flex: 1;
+}
+
+.detailContent label {
+  display: block;
+  color: #666;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.detailContent p {
+  margin: 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.detailContent input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.editActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: flex-end;
+}
+
+.saveButton {
+  padding: 0.75rem 1.5rem;
+  background: #00b894;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.saveButton:hover {
+  background: #00a884;
+}
+
+.cancelButton {
+  padding: 0.75rem 1.5rem;
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.cancelButton:hover {
+  background: #ff5252;
+}
+
+/* Preferences Section */
+.preferencesSection {
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+}
+
+.preferencesSection h2 {
+  margin: 0 0 2rem;
+  color: #333;
+}
+
+.preferencesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.preferenceItem {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.preferenceItem h3 {
+  margin: 0 0 1rem;
+  color: #333;
+}
+
+.preferenceOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.preferenceOptions label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+  cursor: pointer;
+}
+
+.interestTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.interestTag {
+  padding: 0.5rem 1rem;
+  background: #e3f2fd;
+  color: #1976d2;
+  border-radius: 20px;
+  font-size: 0.875rem;
+}
+
+/* Travel History */
+.travelHistory {
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+}
+
+.travelHistory h2 {
+  margin: 0 0 2rem;
+  color: #333;
+}
+
+.historyList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.historyItem {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.historyItem:hover {
+  transform: translateY(-2px);
+}
+
+.tripIcon {
+  width: 50px;
+  height: 50px;
+  background: #e3f2fd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1976d2;
+  font-size: 1.5rem;
+}
+
+.tripDetails {
+  flex: 1;
+}
+
+.tripDetails h3 {
+  margin: 0 0 0.5rem;
+  color: #333;
+}
+
+.tripDetails p {
+  margin: 0.25rem 0;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.statusBadge {
+  padding: 0.5rem 1rem;
+  background: #e8f5e9;
+  color: #2e7d32;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.noHistory {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+  .profileContainer {
+    padding: 1rem;
+  }
+
+  .profileTabs {
+    flex-direction: column;
+  }
+
+  .profileHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .historyItem {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tripDetails p {
+    justify-content: center;
+  }
+} 
