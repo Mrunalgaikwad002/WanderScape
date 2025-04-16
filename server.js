@@ -24,13 +24,7 @@ app.use(cors({
   credentials: true,
 }));
 
-// Security headers
-app.use((req, res, next) => {
-  res.setHeader('X-Content-Type-Options', 'nosniff');
-  res.setHeader('X-Frame-Options', 'DENY');
-  res.setHeader('X-XSS-Protection', '1; mode=block');
-  next();
-});
+
 
 // Connect to database
 connectToDb();
@@ -46,39 +40,7 @@ app.get('/home', auth, (req, res) => {
   res.json({ status: "success", message: "Welcome to protected route" });
 });
 
-// Add health check endpoint
-app.get('/health', async (req, res) => {
-  try {
-    // Check database connection
-    const dbState = mongoose.connection.readyState;
-    const dbStatus = {
-      0: "disconnected",
-      1: "connected",
-      2: "connecting",
-      3: "disconnecting"
-    };
 
-    res.json({
-      status: "success",
-      message: "Health check passed",
-      timestamp: new Date(),
-      database: {
-        state: dbStatus[dbState],
-        host: mongoose.connection.host
-      },
-      memory: {
-        heapUsed: process.memoryUsage().heapUsed / 1024 / 1024,
-        heapTotal: process.memoryUsage().heapTotal / 1024 / 1024
-      }
-    });
-  } catch (error) {
-    res.status(500).json({
-      status: "error",
-      message: "Health check failed",
-      error: error.message
-    });
-  }
-});
 
 // API routes
 app.use('/register', registerrouter);
