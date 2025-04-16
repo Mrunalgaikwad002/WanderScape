@@ -16,11 +16,8 @@ import mongoose from "mongoose";
 const app = express();
 
 // Security middleware
-app.use(cookieParser());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json({ limit: '10kb' })); // Limit body size
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "https://wanderscape.netlify.app",
+  origin: "https://wanderscape.netlify.app",
   credentials: true,
 }));
 
