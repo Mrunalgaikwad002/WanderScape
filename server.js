@@ -21,6 +21,10 @@ app.use(cors({
   credentials: true,
 }));
 
+app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json({ limit: '10kb' }));
+
 
 
 // Connect to database
