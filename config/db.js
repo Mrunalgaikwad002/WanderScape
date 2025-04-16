@@ -12,7 +12,7 @@ const connectToDb = async () => {
         };
 
         // Connect to MongoDB
-        const conn = await mongoose.connect("mongodb://localhost:27017/WanderScape");
+        const conn = await mongoose.connect(process.env.MONGO_URI);
         console.log(`MongoDB Connected: ${conn.connection.host}`);
 
         // Monitor database events
